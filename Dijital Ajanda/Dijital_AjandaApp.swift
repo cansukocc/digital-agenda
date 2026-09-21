@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct Dijital_AjandaApp: App {
+    @State private var notes = NoteStore()
+
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .environment(notes)
         }
     }
 }

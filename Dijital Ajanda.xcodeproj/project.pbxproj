@@ -11,6 +11,16 @@
 		F917F42430616B4200AC943B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F917F42330616B4200AC943B /* ContentView.swift */; };
 		F917F42630616B4300AC943B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F917F42530616B4300AC943B /* Assets.xcassets */; };
 		F917F42930616B4300AC943B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F917F42830616B4300AC943B /* Preview Assets.xcassets */; };
+		A0D1A7A0B011000000000001 /* AgendaCalendar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D1A7A0C0DE000000000001 /* AgendaCalendar.swift */; };
+		A0D1A7A0B011000000000002 /* AgendaPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D1A7A0C0DE000000000002 /* AgendaPage.swift */; };
+		A0D1A7A0B011000000000003 /* NoteStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D1A7A0C0DE000000000003 /* NoteStore.swift */; };
+		A0D1A7A0B011000000000004 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D1A7A0C0DE000000000004 /* Theme.swift */; };
+		A0D1A7A0B011000000000005 /* LinedTextEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D1A7A0C0DE000000000005 /* LinedTextEditor.swift */; };
+		A0D1A7A0B011000000000006 /* DayPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D1A7A0C0DE000000000006 /* DayPageView.swift */; };
+		A0D1A7A0B011000000000007 /* JournalPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D1A7A0C0DE000000000007 /* JournalPageView.swift */; };
+		A0D1A7A0B011000000000008 /* WeekPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D1A7A0C0DE000000000008 /* WeekPageView.swift */; };
+		A0D1A7A0B011000000000009 /* MonthPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D1A7A0C0DE000000000009 /* MonthPageView.swift */; };
+		A0D1A7A0B01100000000000A /* MonthsIndexView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D1A7A0C0DE00000000000A /* MonthsIndexView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +29,16 @@
 		F917F42330616B4200AC943B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		F917F42530616B4300AC943B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F917F42830616B4300AC943B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A0D1A7A0C0DE000000000001 /* AgendaCalendar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgendaCalendar.swift; sourceTree = "<group>"; };
+		A0D1A7A0C0DE000000000002 /* AgendaPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgendaPage.swift; sourceTree = "<group>"; };
+		A0D1A7A0C0DE000000000003 /* NoteStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteStore.swift; sourceTree = "<group>"; };
+		A0D1A7A0C0DE000000000004 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		A0D1A7A0C0DE000000000005 /* LinedTextEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinedTextEditor.swift; sourceTree = "<group>"; };
+		A0D1A7A0C0DE000000000006 /* DayPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayPageView.swift; sourceTree = "<group>"; };
+		A0D1A7A0C0DE000000000007 /* JournalPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalPageView.swift; sourceTree = "<group>"; };
+		A0D1A7A0C0DE000000000008 /* WeekPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekPageView.swift; sourceTree = "<group>"; };
+		A0D1A7A0C0DE000000000009 /* MonthPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthPageView.swift; sourceTree = "<group>"; };
+		A0D1A7A0C0DE00000000000A /* MonthsIndexView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthsIndexView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +73,16 @@
 			children = (
 				F917F42130616B4200AC943B /* Dijital_AjandaApp.swift */,
 				F917F42330616B4200AC943B /* ContentView.swift */,
+				A0D1A7A0C0DE000000000001 /* AgendaCalendar.swift */,
+				A0D1A7A0C0DE000000000002 /* AgendaPage.swift */,
+				A0D1A7A0C0DE000000000003 /* NoteStore.swift */,
+				A0D1A7A0C0DE000000000004 /* Theme.swift */,
+				A0D1A7A0C0DE000000000005 /* LinedTextEditor.swift */,
+				A0D1A7A0C0DE000000000006 /* DayPageView.swift */,
+				A0D1A7A0C0DE000000000007 /* JournalPageView.swift */,
+				A0D1A7A0C0DE000000000008 /* WeekPageView.swift */,
+				A0D1A7A0C0DE000000000009 /* MonthPageView.swift */,
+				A0D1A7A0C0DE00000000000A /* MonthsIndexView.swift */,
 				F917F42530616B4300AC943B /* Assets.xcassets */,
 				F917F42730616B4300AC943B /* Preview Content */,
 			);
@@ -138,6 +168,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				F917F42430616B4200AC943B /* ContentView.swift in Sources */,
+				A0D1A7A0B011000000000001 /* AgendaCalendar.swift in Sources */,
+				A0D1A7A0B011000000000002 /* AgendaPage.swift in Sources */,
+				A0D1A7A0B011000000000003 /* NoteStore.swift in Sources */,
+				A0D1A7A0B011000000000004 /* Theme.swift in Sources */,
+				A0D1A7A0B011000000000005 /* LinedTextEditor.swift in Sources */,
+				A0D1A7A0B011000000000006 /* DayPageView.swift in Sources */,
+				A0D1A7A0B011000000000007 /* JournalPageView.swift in Sources */,
+				A0D1A7A0B011000000000008 /* WeekPageView.swift in Sources */,
+				A0D1A7A0B011000000000009 /* MonthPageView.swift in Sources */,
+				A0D1A7A0B01100000000000A /* MonthsIndexView.swift in Sources */,
 				F917F42230616B4200AC943B /* Dijital_AjandaApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
