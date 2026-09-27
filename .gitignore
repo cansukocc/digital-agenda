@@ -1,0 +1,18 @@
+# Xcode
+#
+build/
+DerivedData/
+*.xcodeproj/xcuserdata/
+*.xcodeproj/project.xcworkspace/xcuserdata/
+*.xcuserstate
+*.xcscmblueprint
+*.xccheckout
+
+# Ajanda uygulamasıyla ilgisi olmayan, buraya yanlışlıkla düşmüş dosyalar
+Dijital Ajanda/ESNAFY_PROJE.md
+
+# macOS
+.DS_Store
+
+# Geçici / kişisel notlar
+*.orig
