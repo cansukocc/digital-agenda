@@ -2,7 +2,7 @@
 //  DayPageView.swift
 //  Dijital Ajanda
 //
-//  Tek günün sayfası: üstte tarih, altında çizgili yazı alanı.
+//  Tek günün sayfası: üstte tarih, altında yuvarlaklı yapılacaklar listesi, en altta çizgili not alanı.
 //
 
 import SwiftUI
@@ -17,17 +17,40 @@ struct DayPageView: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
             header
-            LinedTextEditor(text: Binding(
-                get: { notes.text(for: .day(date)) },
-                set: { notes.setText($0, for: .day(date)) }
-            ))
-            .frame(maxHeight: .infinity)
-            .accessibilityLabel("\(AgendaFormat.day(date)) \(AgendaFormat.monthAndYear(date)) notları")
+            GeometryReader { proxy in
+                VStack(alignment: .leading, spacing: 0) {
+                    TodoListView(scope: .day(date), title: "Yapılacaklar")
+                        .frame(maxHeight: .infinity)
+                    notesSection
+                        .frame(height: min(max(proxy.size.height * 0.3, 130), 240))
+                }
+            }
         }
         .padding(.horizontal, 22)
         .padding(.top, 14)
         .frame(maxWidth: 760)
         .frame(maxWidth: .infinity)
+    }
+
+    private var notesSection: some View {
+        VStack(alignment: .leading, spacing: 2) {
+            Text("Notlar")
+                .font(Theme.serif(15, weight: .medium))
+                .foregroundStyle(Theme.inkSoft)
+                .padding(.top, 8)
+            LinedTextEditor(
+                text: Binding(
+                    get: { notes.text(for: .day(date)) },
+                    set: { notes.setText($0, for: .day(date)) }
+                ),
+                lineHeight: 30,
+                fontSize: 17
+            )
+            .accessibilityLabel("\(AgendaFormat.day(date)) \(AgendaFormat.monthAndYear(date)) notları")
+        }
+        .overlay(alignment: .top) {
+            Rectangle().fill(Theme.rule).frame(height: 1)
+        }
     }
 
     private var header: some View {

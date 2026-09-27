@@ -8,6 +8,10 @@
 import Foundation
 
 enum AgendaPage: Hashable {
+    /// Ajandanın kapağı (ilk sayfa).
+    case cover
+    /// Yıllık bakış: bütün ayların küçük takvimleri.
+    case calendar
     /// Aylar tablosu. Tarih, tablonun hemen ardından başlayacak ayı belirtir.
     case months(Date)
     case day(Date)
@@ -23,14 +27,20 @@ enum AgendaPage: Hashable {
     var previous: AgendaPage? {
         typealias Cal = AgendaCalendar
         switch self {
+        case .cover:
+            return nil
+
+        case .calendar:
+            return .cover
+
         case .months(let month):
-            if Cal.sameDay(month, Cal.monthStart(Cal.start)) { return nil }
+            if Cal.sameDay(month, Cal.monthStart(Cal.start)) { return .calendar }
             return .day(Cal.addDays(month, -1))
 
         case .day(let day):
-            if Cal.isFirstOfMonth(day), Cal.repeatsMonthsTableAtMonthEnd || Cal.sameDay(day, Cal.start) {
-                return .months(day)
-            }
+            // Kitabın ilk günü: öncesinde aylar tablosu (ilk ayı gösterir) vardır.
+            if Cal.sameDay(day, Cal.start) { return .months(Cal.monthStart(day)) }
+            if Cal.isFirstOfMonth(day), Cal.repeatsMonthsTableAtMonthEnd { return .months(day) }
             return .day(Cal.addDays(day, -1))
 
         case .week(let day):
@@ -50,6 +60,12 @@ enum AgendaPage: Hashable {
     var next: AgendaPage? {
         typealias Cal = AgendaCalendar
         switch self {
+        case .cover:
+            return .calendar
+
+        case .calendar:
+            return .months(Cal.monthStart(Cal.start))
+
         case .months(let month):
             return .day(Cal.clamp(month))
 
@@ -74,37 +90,17 @@ enum AgendaPage: Hashable {
         }
     }
 
-    // MARK: - Görünüm değiştirme (kenardaki düğme): gün → hafta → ay → gün
+    // MARK: - Kenar sekmeleri için
 
-    var cycled: AgendaPage {
+    /// Şu an bakılan gün. Kapak, takvim ve günlük sayfalarında bugün (aralığın dışındaysa en yakın uç).
+    /// Ay ve Hafta sekmeleri bu güne göre açılır.
+    var anchorDate: Date {
         typealias Cal = AgendaCalendar
         switch self {
-        case .day(let day): return .week(day)
-        case .week(let day): return .month(day)
-        case .month(let day): return .day(Cal.clamp(day))
-        case .months(let month): return .week(Cal.clamp(month))
-        case .journal: return .week(Cal.home)
-        }
-    }
-
-    /// Kenardaki düğmenin gösterdiği ad ve simge (basınca gidilecek görünüm).
-    var viewName: String {
-        switch self {
-        case .day: return "Gün"
-        case .week: return "Hafta"
-        case .month: return "Ay"
-        case .months: return "Aylar"
-        case .journal: return "Günlük"
-        }
-    }
-
-    var viewIcon: String {
-        switch self {
-        case .day: return "doc.text"
-        case .week: return "list.bullet.rectangle"
-        case .month: return "calendar"
-        case .months: return "tablecells"
-        case .journal: return "book"
+        case .months(let day), .day(let day), .week(let day), .month(let day):
+            return Cal.clamp(day)
+        case .cover, .calendar, .journal:
+            return Cal.home
         }
     }
 
@@ -112,6 +108,8 @@ enum AgendaPage: Hashable {
 
     var title: String {
         switch self {
+        case .cover: return ""
+        case .calendar: return "Takvim"
         case .months: return "Aylar"
         case .day(let day): return AgendaFormat.monthAndYear(day)
         case .week(let day): return AgendaFormat.weekRange(day)
@@ -120,19 +118,28 @@ enum AgendaPage: Hashable {
         }
     }
 
-    /// Aylar tablosunun açılacağı ay: bakılan sayfanın ayı.
-    var monthAnchor: Date {
-        typealias Cal = AgendaCalendar
-        switch self {
-        case .months(let day), .day(let day), .week(let day), .month(let day):
-            return Cal.monthStart(Cal.clamp(day))
-        case .journal:
-            return Cal.monthStart(Cal.home)
-        }
+    var isCover: Bool {
+        if case .cover = self { return true }
+        return false
     }
 
-    var isMonthsTable: Bool {
-        if case .months = self { return true }
+    var isCalendar: Bool {
+        if case .calendar = self { return true }
+        return false
+    }
+
+    var isDay: Bool {
+        if case .day = self { return true }
+        return false
+    }
+
+    var isWeek: Bool {
+        if case .week = self { return true }
+        return false
+    }
+
+    var isMonth: Bool {
+        if case .month = self { return true }
         return false
     }
 

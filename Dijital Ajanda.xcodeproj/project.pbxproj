@@ -21,6 +21,15 @@
 		A0D1A7A0B011000000000008 /* WeekPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D1A7A0C0DE000000000008 /* WeekPageView.swift */; };
 		A0D1A7A0B011000000000009 /* MonthPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D1A7A0C0DE000000000009 /* MonthPageView.swift */; };
 		A0D1A7A0B01100000000000A /* MonthsIndexView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D1A7A0C0DE00000000000A /* MonthsIndexView.swift */; };
+		A0D1A7A0B01100000000000B /* TodoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D1A7A0C0DE00000000000B /* TodoListView.swift */; };
+		A0D1A7A0B01100000000000C /* CoverPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D1A7A0C0DE00000000000C /* CoverPageView.swift */; };
+		A0D1A7A0B01100000000000D /* YearCalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D1A7A0C0DE00000000000D /* YearCalendarView.swift */; };
+		A0D1A7A0B01100000000000E /* LockManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D1A7A0C0DE00000000000E /* LockManager.swift */; };
+		A0D1A7A0B01100000000000F /* PasscodeEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D1A7A0C0DE00000000000F /* PasscodeEntryView.swift */; };
+		A0D1A7A0B011000000000010 /* LockScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D1A7A0C0DE000000000010 /* LockScreenView.swift */; };
+		A0D1A7A0B011000000000011 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D1A7A0C0DE000000000011 /* OnboardingView.swift */; };
+		A0D1A7A0B011000000000012 /* AppRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D1A7A0C0DE000000000012 /* AppRootView.swift */; };
+		A0D1A7A0B011000000000013 /* PaletteMath.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0D1A7A0C0DE000000000013 /* PaletteMath.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +48,15 @@
 		A0D1A7A0C0DE000000000008 /* WeekPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekPageView.swift; sourceTree = "<group>"; };
 		A0D1A7A0C0DE000000000009 /* MonthPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthPageView.swift; sourceTree = "<group>"; };
 		A0D1A7A0C0DE00000000000A /* MonthsIndexView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthsIndexView.swift; sourceTree = "<group>"; };
+		A0D1A7A0C0DE00000000000B /* TodoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListView.swift; sourceTree = "<group>"; };
+		A0D1A7A0C0DE00000000000C /* CoverPageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoverPageView.swift; sourceTree = "<group>"; };
+		A0D1A7A0C0DE00000000000D /* YearCalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YearCalendarView.swift; sourceTree = "<group>"; };
+		A0D1A7A0C0DE00000000000E /* LockManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockManager.swift; sourceTree = "<group>"; };
+		A0D1A7A0C0DE00000000000F /* PasscodeEntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasscodeEntryView.swift; sourceTree = "<group>"; };
+		A0D1A7A0C0DE000000000010 /* LockScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockScreenView.swift; sourceTree = "<group>"; };
+		A0D1A7A0C0DE000000000011 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		A0D1A7A0C0DE000000000012 /* AppRootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRootView.swift; sourceTree = "<group>"; };
+		A0D1A7A0C0DE000000000013 /* PaletteMath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaletteMath.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +91,15 @@
 			children = (
 				F917F42130616B4200AC943B /* Dijital_AjandaApp.swift */,
 				F917F42330616B4200AC943B /* ContentView.swift */,
+				A0D1A7A0C0DE000000000013 /* PaletteMath.swift */,
+				A0D1A7A0C0DE000000000012 /* AppRootView.swift */,
+				A0D1A7A0C0DE000000000011 /* OnboardingView.swift */,
+				A0D1A7A0C0DE000000000010 /* LockScreenView.swift */,
+				A0D1A7A0C0DE00000000000F /* PasscodeEntryView.swift */,
+				A0D1A7A0C0DE00000000000E /* LockManager.swift */,
+				A0D1A7A0C0DE00000000000D /* YearCalendarView.swift */,
+				A0D1A7A0C0DE00000000000C /* CoverPageView.swift */,
+				A0D1A7A0C0DE00000000000B /* TodoListView.swift */,
 				A0D1A7A0C0DE000000000001 /* AgendaCalendar.swift */,
 				A0D1A7A0C0DE000000000002 /* AgendaPage.swift */,
 				A0D1A7A0C0DE000000000003 /* NoteStore.swift */,
@@ -168,6 +195,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				F917F42430616B4200AC943B /* ContentView.swift in Sources */,
+				A0D1A7A0B011000000000013 /* PaletteMath.swift in Sources */,
+				A0D1A7A0B011000000000012 /* AppRootView.swift in Sources */,
+				A0D1A7A0B011000000000011 /* OnboardingView.swift in Sources */,
+				A0D1A7A0B011000000000010 /* LockScreenView.swift in Sources */,
+				A0D1A7A0B01100000000000F /* PasscodeEntryView.swift in Sources */,
+				A0D1A7A0B01100000000000E /* LockManager.swift in Sources */,
+				A0D1A7A0B01100000000000D /* YearCalendarView.swift in Sources */,
+				A0D1A7A0B01100000000000C /* CoverPageView.swift in Sources */,
+				A0D1A7A0B01100000000000B /* TodoListView.swift in Sources */,
 				A0D1A7A0B011000000000001 /* AgendaCalendar.swift in Sources */,
 				A0D1A7A0B011000000000002 /* AgendaPage.swift in Sources */,
 				A0D1A7A0B011000000000003 /* NoteStore.swift in Sources */,
@@ -307,6 +343,7 @@
 		F917F42D30616B4300AC943B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_ALTERNATE_APPICON_NAMES = "AppIcon-seftali AppIcon-vanilya AppIcon-nane AppIcon-bebek AppIcon-lavanta AppIcon-bordo AppIcon-lacivert AppIcon-orman AppIcon-kahve AppIcon-mor AppIcon-siyah";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -315,6 +352,7 @@
 				DEVELOPMENT_TEAM = 6924DKQ6Q8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "Ajandanı Face ID ile açabilmek için.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -336,6 +374,7 @@
 		F917F42E30616B4300AC943B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_ALTERNATE_APPICON_NAMES = "AppIcon-seftali AppIcon-vanilya AppIcon-nane AppIcon-bebek AppIcon-lavanta AppIcon-bordo AppIcon-lacivert AppIcon-orman AppIcon-kahve AppIcon-mor AppIcon-siyah";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -344,6 +383,7 @@
 				DEVELOPMENT_TEAM = 6924DKQ6Q8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "Ajandanı Face ID ile açabilmek için.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

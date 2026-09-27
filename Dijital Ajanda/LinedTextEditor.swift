@@ -58,7 +58,7 @@ struct LinedTextEditor: UIViewRepresentable {
             view?.resignFirstResponder()
         })
         toolbar.items = [UIBarButtonItem(systemItem: .flexibleSpace), done]
-        toolbar.tintColor = UIColor(Theme.accent)
+        toolbar.tintColor = Theme.accentUI
         toolbar.sizeToFit()
         return toolbar
     }

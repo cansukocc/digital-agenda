@@ -12,6 +12,8 @@ struct MonthsIndexView: View {
     let focus: Date
     let open: (Date) -> Void
 
+    private static let cellHeight: CGFloat = 84
+
     private var years: [(year: String, months: [Date])] {
         var groups: [(year: String, months: [Date])] = []
         for month in AgendaCalendar.months {
@@ -64,7 +66,7 @@ struct MonthsIndexView: View {
                         if column < row.count {
                             cell(row[column])
                         } else {
-                            Color.clear.frame(maxWidth: .infinity, minHeight: 72)
+                            Color.clear.frame(maxWidth: .infinity, minHeight: Self.cellHeight, maxHeight: Self.cellHeight)
                         }
                     }
                 }
@@ -103,7 +105,7 @@ struct MonthsIndexView: View {
                     .minimumScaleFactor(0.6)
             }
             .padding(10)
-            .frame(maxWidth: .infinity, minHeight: 72, alignment: .topLeading)
+            .frame(maxWidth: .infinity, minHeight: Self.cellHeight, maxHeight: Self.cellHeight, alignment: .topLeading)
             .background(isFocus ? Theme.accent : Color.clear)
             .contentShape(Rectangle())
             .overlay {

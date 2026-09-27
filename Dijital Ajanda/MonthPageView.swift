@@ -122,7 +122,7 @@ private struct MonthDayCell: View {
                 Circle()
                     .fill(Theme.accent)
                     .frame(width: 5, height: 5)
-                    .opacity(notes.hasText(for: .day(date)) ? 1 : 0)
+                    .opacity(notes.hasContent(on: date) ? 1 : 0)
                 Spacer(minLength: 0)
             }
             .padding(.top, 6)

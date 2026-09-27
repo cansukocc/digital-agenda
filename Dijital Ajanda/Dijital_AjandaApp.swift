@@ -10,11 +10,13 @@ import SwiftUI
 @main
 struct Dijital_AjandaApp: App {
     @State private var notes = NoteStore()
+    @State private var lock = LockManager()
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            AppRootView()
                 .environment(notes)
+                .environment(lock)
         }
     }
 }

@@ -8,8 +8,8 @@
 import Foundation
 
 enum AgendaCalendar {
-    /// Ajandanın ilk ve son günü (Ekim 2026 – Aralık 2027).
-    static let start = date(2026, 10, 1)
+    /// Ajandanın ilk ve son günü (21 Eylül 2026 – 31 Aralık 2027).
+    static let start = date(2026, 9, 21)
     static let end = date(2027, 12, 31)
 
     /// Son günden sonra gelen boş günlük / sabah sayfası sayısı.
@@ -144,6 +144,7 @@ enum AgendaFormat {
     private static let monthName = formatter("LLLL")
     private static let monthYear = formatter("LLLL yyyy")
     private static let year = formatter("yyyy")
+    private static let fullDate = formatter("d MMMM yyyy")
 
     static func day(_ date: Date) -> String { dayNumber.string(from: date) }
     static func weekdayName(_ date: Date) -> String { weekday.string(from: date) }
@@ -151,6 +152,8 @@ enum AgendaFormat {
     static func month(_ date: Date) -> String { monthName.string(from: date) }
     static func monthAndYear(_ date: Date) -> String { monthYear.string(from: date) }
     static func yearNumber(_ date: Date) -> String { year.string(from: date) }
+    /// "21 Eylül 2026"
+    static func fullDay(_ date: Date) -> String { fullDate.string(from: date) }
 
     /// "19 – 25 Ekim 2026", "28 Eylül – 4 Ekim 2026" ya da yıl geçişinde iki yılı da içeren aralık.
     static func weekRange(_ date: Date) -> String {
